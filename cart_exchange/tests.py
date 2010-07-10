@@ -1,9 +1,9 @@
 """
 Test for satchmo cart exchange.
 """
-from satchmo_store.shop import models
 from django.core.urlresolvers import reverse
 from django.test import TestCase
+from satchmo_store.shop import models
 
 
 class ExchangeTest(TestCase):
@@ -15,6 +15,12 @@ class ExchangeTest(TestCase):
         """
         cart = models.Cart()
         self.client.get(reverse('cart_exchange.views.cart_save'))
+
+    def test_cart_not_found(self):
+        """
+        Test cart not found page gets displayed.
+        """
+        raise NotImplementedError
 
     def test_cart_saved(self):
         """
