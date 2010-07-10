@@ -1,6 +1,7 @@
 """
 Test for satchmo cart exchange.
 """
+from satchmo_store.shop import models
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 
@@ -12,7 +13,7 @@ class ExchangeTest(TestCase):
         """
         Tests cart saving.
         """
-        cart = Cart()
+        cart = models.Cart()
         self.client.get(reverse('cart_exchange.views.cart_save'))
 
     def test_cart_saved(self):
