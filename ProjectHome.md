@@ -1,0 +1,1 @@
+Satchmo cart exchange is an application for Satchmo framework based on Django that lets you save your cart's contents as one user and load as another one.
